@@ -1,0 +1,164 @@
+vendor-prefixes= o ms mos webkit official
+azul_oscuro = #0093DD
+azul = #47A3DA
+azulf = #0A96DD
+naranja = #FD640A
+negrob = #4D4D34
+morado = #B88AE6
+verde = #01AC0E
+@font-face 
+	font-family 'iconos'
+	src url('fonts/iconos.eot')
+	src url('fonts/iconos.eot?#iefix') format('embedded-opentype'),
+	url('fonts/iconos.woff') format('woff'),
+	url('fonts/iconos.ttf') format('truetype'),
+	url('fonts/iconos.svg#icomoon') format('svg')
+	font-weight normal
+	font-style normal
+
+borde-redondo(p)
+    border-radius p
+    -moz-border-radius p
+    -webkit-border-radius p
+sombra(m1,m2,m3,color)
+	box-shadow m1 m2 m3 color
+	-moz-box-shadow m1 m2 m3 color
+	-webkit-box-shadow m1 m2 m3 color
+transicion(prop)
+	transition-property prop
+	transition-duration 1s
+	-webkit-transition-property prop
+	-webkit-transition-duration 1s
+	-moz-transition-property prop
+	-moz-transition-duration 1s
+#btnLimpiar
+	display none
+.contenedor
+	margin-top 35px
+.contenedor-img
+	cursor default
+	float left
+	height 50%
+	max-height 50%
+	.mascara
+		left 0
+		height 100%
+		position abusolute
+		top 0
+		width 100%
+	.img 
+		display block
+		position relative
+	overflow hidden !important
+	position relative
+	text-aling center
+	width: 48%;
+	border solid
+
+.busqueda-rango
+	top 5%
+	left -25%
+	position fixed
+	z-index 100
+	padding 0px !important
+	width 25% !important
+	#prueba
+		width 10%	
+		font-size 1em
+		top 42%
+		padding-left 5px
+		padding-top 5px
+		height 5%
+		text-aling center
+		box-shadow 0 0 5px #580000 
+		color white
+		font-weight bold
+		position absolute 
+		left 100%
+		background-color #CC2900
+		-webkit-border-top-right-radius 5px
+		-webkit-border-bottom-right-radius 5px
+		-moz-border-radius-topright 5px
+		-moz-border-radius-bottomright 5px
+		border-top-right-radius 5px
+		border-bottom-right-radius 5px
+.figura
+	display inline-block
+	bottom 5px
+	float right
+	height 30px
+	width 15%
+	img 
+		height 100%
+		width 100%
+
+.last-envio
+	color #248FB2
+	cursor pointer
+	transicion('color')
+	&:hover + .hr-envio
+		color red !important
+		//font-size 1.3em
+.pagos
+	background-color 	#FFE6FF
+	border 1px solid azul
+	heigth 250px !important // no lo aplica
+	margin-bottom 10px
+	sombra(3px,3px,7px,#666666)
+	p
+		border-bottom solid 2px azul_oscuro
+		margin-top 10px		
+.renglon
+	margin-top 50px
+.tabla
+	thead
+		background-color morado
+		color white
+	tbody
+		tr:nth-child(even)
+			background-color #E6CCFF
+		tr:nth-child(odd)
+			background-color #F5EBFF
+.tablaR
+	thead
+		background-color #D6EBFF
+		color #0F2E4C
+	tbody
+		tr:nth-child(even)
+			background-color #85C2FF
+		tr:nth-child(odd)
+			background-color #3399FF
+	color #EBF5FF
+	font-weight bold
+.titulo
+	font-size 1.2em
+	font-weight bold
+.titulo-pago
+	color #001A66
+	font-weight bold
+	
+@media screen and (max-width:800px)
+	.busqueda-rango
+		top 0
+		left -80%
+		position fixed
+		z-index 100
+		padding 0px !important
+		width 80% !important
+		#prueba
+			width 25px
+			top 42%
+			height 25px
+			position absolute
+			//padding-left 5px
+			padding-top 5px 
+			left 100%
+			background-color #CC2900
+			-webkit-border-top-right-radius 3px
+			-webkit-border-bottom-right-radius 3px
+			-moz-border-radius-topright 3px
+			-moz-border-radius-bottomright 3px
+			border-top-right-radius 3px
+			border-bottom-right-radius 3px
+	
+	

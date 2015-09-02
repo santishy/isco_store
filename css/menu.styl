@@ -1,0 +1,185 @@
+.btn-menu
+	color black
+	font-size 1.3em
+	width 100%
+	display none
+.cbp-hrmenu
+	//border-bottom 4px solid #000
+	margin-top -10px
+	width 100%
+	
+.cbp-hrmenu ul
+	margin 0
+	padding 0
+	list-style none
+	
+.cbp-hrmenu
+	
+	.cbp-hrsub-inner
+		>div
+			font-size 12px
+			float left
+			margin-right 10px
+			padding: 0 2em 0
+			width 25%
+			
+			a 
+				line-height 2em
+			
+		&:before
+		&:after
+			content ""
+			display table
+			
+		&:after
+			clear both	
+		
+		>div.cbp-hrsub-child
+			width 100% !important	
+			
+			a 
+				margin-right 10px
+				min-width 20px
+				width 20px
+
+
+	>ul, .cbp-hrsub-inner
+		margin 0 auto
+		max-width 70%
+		padding 0 1.875em
+		width 95%
+		
+		>li
+			display inline-block
+			ul 
+				width 100%
+			>a
+				border-top 3px solid #DCDFEC
+				color #000
+				font-weight 500
+				display inline-block
+				padding 1em 2em
+				transition 2.5ms all
+				
+				&:hover
+					color #47a3da
+					//font-weight 600
+					//border-top 3px solid #47a3da
+					text-decoration none
+					
+		>li.cbp-hropen
+			a 
+				background #47a3da
+				color #fff		
+				
+		// submenu //
+	.cbp-hrsub
+		background-color #47a3da
+		border-radius 0px 0px 5px 5px
+		box-shadow 0px 3px 5px rgba(#000,0.5)
+		display none
+		left 10%
+		position absolute
+		transition 0.5ms all
+		width 80%
+		
+		h4 
+			color #afdefa
+			font-size 160%
+			font-weight 300
+			margin 0
+			padding: 2em 0 0.6em
+		
+
+.cbp-hropen .cbp-hrsub
+	display block 
+	padding-bottom 3em		
+					
+		
+@media screen and (max-width:800px)
+	.cbp-hrmenu
+		//height 0px
+		display none
+	#btn-menu
+		float right
+		margin-right 10px
+	#mySlider
+		height 100px
+		overflow hidden 
+	.carousel-inner>.item>img, .carousel-inner>.item>a>img
+		height 100px !important
+		width 100%		
+		
+	.btn-menu
+		width 100%
+		background-color #005CE6
+		display block
+		margin-bottom 10px
+		a 
+			padding 20px
+			margin-top 1em
+			color #fff
+			display block
+			height 100%
+			text-decoration none
+			font-weight bold
+@media screen and (max-width: 52.75em) { 
+
+	.cbp-hrmenu {
+		font-size: 80%;
+	}
+
+}
+
+@media screen and (max-width: 43em) { 
+
+	.cbp-hrmenu {
+		border: none;
+		font-size: 120%;
+		margin-top 40px
+	}
+
+	.cbp-hrmenu > ul,
+	.cbp-hrmenu .cbp-hrsub-inner {
+		width: 100%;
+		padding: 0;
+	}
+
+	.cbp-hrmenu .cbp-hrsub-inner {
+		padding: 0 2em;
+		font-size: 75%;
+	}
+
+	.cbp-hrmenu > ul > li {
+		display: block;
+		border-bottom: 4px solid #47a3da;
+		width 100%
+	}
+
+	.cbp-hrmenu > ul > li > a { 
+		display: block;
+		padding: 1em 3em;
+	}
+
+	.cbp-hrmenu .cbp-hrsub { 
+		left 0
+		position: relative;
+		width 100%
+	}
+
+	.cbp-hrsub h4 {
+		padding-top: 0.6em;
+	}
+
+}
+
+@media screen and (max-width: 36em) { 
+	.cbp-hrmenu .cbp-hrsub-inner > div {
+		float: none;
+		padding: 0 2em;
+		width: 100%;
+	}
+}
+		
+			
+	

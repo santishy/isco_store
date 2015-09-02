@@ -1,0 +1,642 @@
+
+vendor-prefixes= o ms mos webkit official
+azul_oscuro = #0093DD
+azul = #47A3DA
+azulf = #0A96DD
+naranja = #FD640A
+negrob = #4D4D34
+verde = #01AC0E
+
+/* mixins */
+
+
+
+/*-----*/
+@font-face {
+	font-family: 'iconos';
+	src:url('../font/icomoon.eot?guw6kg');
+	src:url('../font/icomoon.eot?#iefixguw6kg') format('embedded-opentype'),
+		url('../font/icomoon.woff?guw6kg') format('woff'),
+		url('../font/icomoon.ttf?guw6kg') format('truetype'),
+		url('../font/icomoon.svg?guw6kg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}	
+
+body,html
+	background-image url('../img/fondo.jpg')
+	//background-repeat: no-repeat;
+	background-repeat: repeat-x;
+	//font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	height 100%
+	margin 0
+	overflow-x hidden
+	padding 0
+	max-width 100%
+	width 100%
+	
+.adSearch
+	background-color #008CBA
+	color white	
+	
+.bannerPub
+	
+	figure 
+		img 
+			border-radius 3px
+			box-shadow 0px 3px 3px rgba(#000,0.4)	
+
+	
+.btnCart
+	border-bottom 2px solid #00667A
+	border-radius 5px	
+	padding 8px
+	
+.btnUpdate
+	background-color #358753		
+	
+.cantCart
+	font-size 14px
+	
+.cartImage
+	
+	figure
+		height 80px
+		max-height 80px
+		max-width 80px
+		width 80px	
+		
+		img 
+			height 100%
+			width 100%
+			
+.carousel-inner>.item>img, .carousel-inner>.item>a>img
+	height 250px
+	width 100%			
+			
+.center
+	text-align center			
+
+.contenedor-home
+	position:relative;
+	z-index: -1;
+
+.container-article
+	background #fff
+	border 1px solid azulf
+	border-top none
+	margin 0px auto 20px
+	min-height 400px
+	padding 10px
+	
+.container-cart
+	
+	p 
+		color azul
+		text-align center	
+	
+.container-especificaciones
+	margin 20px 0
+	
+	table 
+		box-shadow 0px 10px 7px -7px rgba(#000,0.5)
+		
+		caption
+			color verde	
+			font-size 1.2em
+			font-weight bold
+	
+.div-article
+	
+	h3 
+		font-size 16px
+		
+.divArticles
+	background-color white
+	border 1px solid rgba(verde,0.8)
+	border-bottom 3px solid rgba(azul_oscuro,0.8)
+	border-radius 10px
+	font-size 10px
+	height 250px
+	margin-bottom 20px
+	padding 15px
+	transition .6ms all
+	
+	&:hover
+		border-bottom 3px solid naranja
+		box-shadow 0px 0px 8px 2px rgba(#000,0.3) inset
+		
+		figure 
+			border-bottom 2px solid verde
+			
+	div:nth-child(2)
+		height 20%
+		overflow hidden
+		
+	div:nth-child(3)
+		height 15%
+		span 
+			color negrob
+			
+		.spnCosto 
+			color azulf
+			font-size 18px	
+			text-align center
+	
+	
+	figure
+		border-bottom 2px solid azul
+		height 50%
+		margin 5px 0
+		transition .2ms all
+		width 100%
+		
+		img 
+			border-radius 30px
+			height 100%
+			max-height 100%
+			width 100%
+							
+			
+	p 
+		font-weight 600
+		text-align justify	
+		
+		a 
+			color negrob
+			text-decoration none
+			
+			&:hover
+				text-decoration underline
+		
+	span 
+		color azulf	
+		font-size 13px
+		font-weight 600	
+		
+.divBanners
+	div 
+		figure
+			height 100%
+			max-width 100%
+			width 100%
+			
+			img 	
+				height 100%
+				width 100%
+
+
+.divCart
+	color negrob	
+	
+	span
+		font-size 40px
+		
+.div-compra
+	
+	.container-cant-first
+		border 3px solid rgba(azul,0.8)
+		border-top none
+		box-shadow 0px 10px 7px -7px rgba(#000,0.5)
+		border-radius 5px
+		line-height 10px
+		padding 10px
+		
+		.div-cant
+			margin-top 20px
+
+		.div-existencia
+			background-color azul_oscuro
+			border-radius 70px
+			font-weight bold
+			color white
+			height 70px
+			line-height 50px
+			margin-top 45px
+			text-align center
+			width 70px
+		
+		p 
+			font-size 20px
+		
+		p.exis
+			font-size 8px	
+			margin-top -30px
+		
+	p:first-child 
+		font-weight 600
+		
+		span 
+			color azul
+			font-size 18px	
+			font-weight bold
+			
+	p 
+		text-align center	
+		
+	p:nth-child(3)
+		font-size 10px		
+			
+.divFrom
+	display none
+		
+.div-image
+	
+	figure
+		border 1px solid rgba(#cbcbcb,0.9)
+		border-radius 5px
+		box-shadow 0px 10px 7px -7px rgba(#000,0.5)
+		height 350px
+		max-height 350px
+		padding 10px
+		width 90%
+		
+		img 
+			height 90%
+			width 100%	
+			
+.divProductosMarca
+	min-height 500px		
+	
+	article.articulomarca
+		background-color #fff	
+		border 1px solid rgba(#000,0.4)
+		border-radius 5px
+		box-shadow 0px 10px 7px -7px rgba(#000,0.5)
+		height 180px
+		padding 10px
+		margin 10px auto
+		width 80%
+		
+		div 
+			a
+				p 
+					color azul_oscuro
+				&:hover
+					text-decoration none
+					transition .5ms all
+					p
+						color naranja
+						
+						
+			p.pDesc
+				overflow-x hidden	
+				
+			p.marcap
+				color verde	
+			p.price
+				color #000	
+			
+		
+		div.divImg 
+			border-right 1px solid rgba(#000,0.5)
+			text-align center
+			
+			figure 
+				height 150px
+				margin 0 auto
+				width 50%
+				
+				img
+					height 100%
+					max-width 100%
+					width 100%
+				
+
+
+.divSearch
+	background-image url('../img/header.jpg'),url('../img/header2.jpg')
+	//background-image url('../img/fondo.jpg')
+	background-repeat: no-repeat;
+	box-shadow 0px 2px 4px rgba(#000,0.4)
+	height auto
+	//margin 0px 0px 15px
+	padding 5px
+	margin-bottom 15px
+	
+	div 
+		figure.logo
+			height 60px
+			img 
+				height 100%
+				width 60%
+				
+footer
+	color white
+	background-color #000
+	height 40px
+	max-width 100%
+	padding 8px
+	width 100%				
+				
+.footer
+	//background-image url('../img/header.jpg')
+	//background-repeat: no-repeat;
+	background-color #cbcbcb
+	height auto
+	margin-top 50px
+	max-width 100%
+	min-height 220px
+	padding 30px
+	width 100%
+	
+	.footer-after
+		background-color red
+		color white
+		width 100%
+		
+		p 
+			line-height 30px
+		
+	.footer-before
+		max-width 100%
+		width 100%
+		
+		ul:first-child
+			list-style none
+			
+			li 
+				display inline-block
+				margin-right 1%
+				text-align center
+				vertical-align top
+				width 30%
+				
+				a 
+					color #000
+					font-size 14px
+				
+				h3
+					//border-bottom 1px solid #000
+					font-size 14px
+					
+				ul 
+					display block	
+					
+					li 
+						display block
+						font-size 12px
+						width 80%
+
+					
+				
+h1,h2,h3,h4
+	color verde
+	font-family: 'Michroma', sans-serif;
+	//font-family: 'Open Sans', sans-serif;
+	font-weight 600	
+	
+h1.h1-seccion	
+	color naranja !important
+	font-size 22px
+	font-weight 500
+				
+hr 
+	background-color azul
+	border 0
+	height 3px
+	
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 13.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(#000,0.5), 0px 0px 1px #0d0d0d;
+  background: azulf
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid white
+  height: 30px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(azul_oscuro,0.8)
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(#000,0.5), 0px 0px 1px #0d0d0d;
+  background: azulf
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid white
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #0000e6;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #0000ff;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px rgba(#000,0.5), 0px 0px 1px #0d0d0d;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #0000ff;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #1a1aff;
+}
+
+	
+.lnkCart
+	//font-size 30px
+	text-decoration none !important	
+
+.loader
+	border-bottom 2px solid azul
+	border-top 2px solid verde
+	border-radius 35px
+	display none
+	height 35px
+	margin 0 auto
+	transition 2ms all
+	width 35px
+	animation:loader 500ms infinite linear
+	
+.mapa
+	border 3px solid rgba(azul_oscuro,0.5)
+	border-radius 3px
+	box-shadow 0px 3px 5px rgba(#000,0.5)
+	float left
+	height 450px
+	margin-top 35px
+	width 100%		
+	
+p.ofertas
+	color red !important
+	text-align center
+	
+	
+		
+	
+.pMsj
+	color azul
+	font-weight bold
+	text-align center
+	
+.ptitulo
+	color naranja
+	font-weight bold	
+						
+.slider
+	border 3px solid rgba(#cbcbcb,0.7)
+	border-radius 5px
+	box-shadow 0px 3px 3px rgba(#000,0.4)
+	height 300px	
+	margin 50px 0 20px
+	
+.spnTel
+	color verde
+	font-weight bold
+	
+	&:before
+		color #0093DD
+		content "\e942"
+		display inline-block
+		font-family "iconos"
+		font-size 16px	
+
+	
+.table-cart
+	tr 
+		
+		td.qty
+			max-width 90px
+			width 90px
+			
+		td.tdTotal
+			color verde
+			font-size 16px
+			font-weight bold	
+			line-height 50px
+			
+		td.tdTotalCant
+			font-size 12px
+			font-weight bold
+			line-height 50px	
+			text-decoration underline
+			
+		th 
+			text-align center	
+
+	
+
+	
+@-webkit-keyframes loader
+
+	from 
+		-webkit-transform:  rotate(0deg)
+	to 
+		-webkit-transform rotate(360deg)
+
+@-moz-keyframes loader
+
+	from 
+		-moz-transform:  rotate(0deg)
+	to 
+		-moz-transform rotate(360deg)
+		
+@-ms-keyframes loader
+
+	from 
+		-ms-transform:  rotate(0deg)
+	to 
+		-ms-transform rotate(360deg)		
+		
+
+@-o-keyframes loader
+
+	from 
+		-o-transform:  rotate(0deg)
+	to 
+		-o-transform rotate(360deg)			
+		
+
+@media screen and (max-width:960px)
+	.divArticles
+		//height 250px
+		height 150px !important
+		p 
+			font-size 8px
+			overflow hidden
+		
+		div:nth-child(3)
+			.spnCosto
+				font-size 10px
+		
+	.divProductosMarca
+		
+		article.articulomarca
+			font-size 12px
+			height 200px
+			
+			p.pDesc
+				overflow-x scroll
+			
+			
+	
+	footer
+		height 100px
+		clear both	
+		
+		p 
+			font-size 10px
+	
+	.footer
+		height auto
+		min-height 100%
+		
+		.footer-before
+			height 100%
+			
+			ul:first-child
+		
+				li 
+					
+					width 90%		
