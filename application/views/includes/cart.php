@@ -12,29 +12,29 @@
       <div class="modal-body container-cart" id="container-cart">
         <div><p id="pMsjVacio" style="text-align:center;font-size:18px;"></p></div>
         <div class="table-responsive">
-          	<table class="table table-hover table-cart">
-          		<thead>
-          			<tr>
-          				<th>Imagen</th>
+            <table class="table table-hover table-cart">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
                   <th>Código</th>
-          				<th>Producto</th>
-          				<th>Precio</th>
-          				<th>Cantidad</th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
                   <th>Subtotal</th>
-          			</tr>
-          		</thead>
-          		<tbody id="tblCart">
-          		<?php foreach($this->cart->contents() as $items){ ?>
-          			<tr>
-          				<td class="cartImage">
-          					<figure>
-          						<img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($items['sku'], 0,1)?>/<?=substr($items['sku'], 1,1)?>/<?=$items['sku']?>.jpg" alt="" OnError="Error_Cargar()" />
-          					</figure>
-          				</td>
+                </tr>
+              </thead>
+              <tbody id="tblCart">
+              <?php foreach($this->cart->contents() as $items){ ?>
+                <tr>
+                  <td class="cartImage">
+                    <figure>
+                      <img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($items['sku'], 0,1)?>/<?=substr($items['sku'], 1,1)?>/<?=$items['sku']?>.jpg" alt="" OnError="Error_Cargar()" />
+                    </figure>
+                  </td>
                         <td class="code"><?=$items['id']?></td>
-                		<td><?=$items['name']?></td>
-                		<td><?=$items['price']?></td>
-                		<td class="qty">
+                    <td><?=$items['name']?></td>
+                    <td><?=$items['price']?></td>
+                    <td class="qty">
                             <form action="<?=base_url()?>cart/update" method="post" id="frmScart" name="frmScart">
                               <input type="hidden" name="id" value="<?=$items['id']?>" />
                               <input type="hidden" name="exis" value="<?=$items['existencia']?>" />
@@ -45,8 +45,8 @@
                             </button>
                         </td>
                         <td class="tdSub"><?=$items['subtotal']?></td>
-          			</tr>
-          		<?php } ?>
+                </tr>
+              <?php } ?>
                 </tbody>
               
                 <tbody>
@@ -60,11 +60,11 @@
                     </tr>
                 </tbody>   
                          
-          	</table>
+            </table>
         </div>
       </div>
       <div class="modal-footer">
-      	<span class="loader"></span>
+        <span class="loader"></span>
         <?php
           $arr=$this->cart->contents();
             if(count($arr) > 0){

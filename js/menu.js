@@ -1,6 +1,6 @@
-var cbpHorizontalMenu = (function(){
+/*var cbpHorizontalMenu = (function(){
 
-		var $listItems = $('#cbp-hrmenu > ul > li '),
+		var $listItems = $('.nav > ul > li '),
 			$menuItems = $listItems.children('a'),
 			$body = $('body'),
 			$container = $('.container');
@@ -63,4 +63,4 @@ var cbpHorizontalMenu = (function(){
 
 		return { init:init };
 
-	})();
+	})();*/
