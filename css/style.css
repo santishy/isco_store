@@ -1,5 +1,6 @@
 /* mixins */
 /*-----*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
 @font-face {
   font-family: 'iconos';
   src: url("../font/icomoon.eot?guw6kg");
@@ -9,14 +10,34 @@
 }
 body,
 html {
-  background-image: url("../img/fondo.jpg");
-  background-repeat: repeat-x;
-  font-family: 'Open Sans', sans-serif;
-  height: 100%;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   overflow-x: hidden;
   padding: 0;
   max-width: 100%;
+  width: 100%;
+  background-color: #ffffff;
+}
+h1,h2,h3,h4 {
+  color: #01ac0e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+h1.h1-seccion {
+  color: #fd640a !important;
+  font-weight: 400;
+}
+label {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1.29em;
+}
+.box-shadow{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.5);
+}
+.container-full{
   width: 100%;
 }
 .adSearch {
@@ -49,8 +70,7 @@ html {
   width: 100%;
 }
 .carousel-inner>.item>img,
-.carousel-inner>.item>a>img {
-  height: 250px;
+.carousel-inner>.item>a>img {  
   width: 100%;
 }
 .center {
@@ -88,65 +108,67 @@ html {
 }
 .divArticles {
   background-color: #fff;
-  border: 1px solid rgba(1,172,14,0.8);
-  border-bottom: 3px solid rgba(0,147,221,0.8);
-  border-radius: 10px;
-  font-size: 10px;
-  height: 250px;
+  border-radius: 4px;
+  font-size: 1em;
   margin-bottom: 20px;
   padding: 15px;
   transition: 0.6ms all;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.3) ;
 }
 .divArticles:hover {
-  border-bottom: 3px solid #fd640a;
-  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.3) inset;
+  box-shadow:none;
 }
-.divArticles:hover figure {
-  border-bottom: 2px solid #01ac0e;
-}
+
 .divArticles div:nth-child(2) {
-  height: 20%;
   overflow: hidden;
-}
-.divArticles div:nth-child(3) {
-  height: 15%;
 }
 .divArticles div:nth-child(3) span {
   color: #4d4d34;
 }
-.divArticles div:nth-child(3) .spnCosto {
-  color: #0a96dd;
-  font-size: 18px;
+.divArticles .spnCosto {
+  color: #ffffff;
+  font-size: 1.5em;
   text-align: center;
 }
-.divArticles figure {
-  border-bottom: 2px solid #47a3da;
-  height: 50%;
-  margin: 5px 0;
+.divArticles figure {  
   transition: 0.2ms all;
   width: 100%;
 }
-.divArticles figure img {
-  border-radius: 30px;
-  height: 100%;
-  max-height: 100%;
-  width: 100%;
-}
+
 .divArticles p {
-  font-weight: 600;
-  text-align: justify;
+  position: absolute;
+  bottom: 0px;
+  background-color: #2A2E52;
+  margin: 0 auto;
+  width: 100%;
+  left: 0px;
+  border-radius: 4px 4px 0 0;  
+}
+.divArticles p.descripcion{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0.1em;
+  border-radius: 0 0 4px 4px;
+  color: #ffffff;
+}
+.divArticles p.descripcion:hover {
+  white-space: normal;
 }
 .divArticles p a {
-  color: #4d4d34;
+  color: #ffffff;
   text-decoration: none;
-}
-.divArticles p a:hover {
-  text-decoration: underline;
 }
 .divArticles span {
   color: #0a96dd;
   font-size: 13px;
   font-weight: 600;
+}
+.divArticles .descripcion-costo{
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  left: 0px;
 }
 .divBanners div figure {
   height: 100%;
@@ -164,109 +186,94 @@ html {
   font-size: 40px;
 }
 .div-compra .container-cant-first {
-  border: 3px solid rgba(71,163,218,0.8);
-  border-top: none;
-  box-shadow: 0px 10px 7px -7px rgba(0,0,0,0.5);
-  border-radius: 5px;
-  line-height: 10px;
-  padding: 10px;
+  background-color: #D2D3D5;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
 }
-.div-compra .container-cant-first .div-cant {
-  margin-top: 20px;
+.div-compra h4{
+  color: #2A2E52;
+  font-weight: 500;
 }
-.div-compra .container-cant-first .div-existencia {
-  background-color: #0093dd;
-  border-radius: 70px;
-  font-weight: bold;
-  color: #fff;
-  height: 70px;
-  line-height: 50px;
-  margin-top: 45px;
-  text-align: center;
-  width: 70px;
-}
-.div-compra .container-cant-first p {
-  font-size: 20px;
-}
-.div-compra .container-cant-first p.exis {
-  font-size: 8px;
-  margin-top: -30px;
-}
-.div-compra p:first-child {
-  font-weight: 600;
+.div-compra p.precio {
+  font-weight: 300;
+  font-size: 3.47em;
+  color: #2A2E52;
+  margin: 0px !important;
 }
 .div-compra p:first-child span {
   color: #47a3da;
   font-size: 18px;
   font-weight: bold;
 }
-.div-compra p {
-  text-align: center;
+.div-compra p.iva {
+    font-size: 0.8em;
 }
-.div-compra p:nth-child(3) {
-  font-size: 10px;
+.div-compra p.disponible {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.div-compra p.costo-envio {
+    font-size: 0.67em;
+}
+.div-compra .descripcion{
+  border: 1px solid #e7e7e7;
+  padding: 1em;
+}
+.div-compra .table>tbody>tr>td{
+   border-top: none !important;
+   font-size: 0.89em;
 }
 .divFrom {
   display: none;
 }
-.div-image figure {
-  border: 1px solid rgba(203,203,203,0.9);
-  border-radius: 5px;
-  box-shadow: 0px 10px 7px -7px rgba(0,0,0,0.5);
-  height: 350px;
-  max-height: 350px;
-  padding: 10px;
-  width: 90%;
-}
-.div-image figure img {
-  height: 90%;
-  width: 100%;
-}
-.divProductosMarca {
-  min-height: 500px;
-}
-.divProductosMarca article.articulomarca {
+.divProductosMarca div.articulomarca {
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.4);
   border-radius: 5px;
-  box-shadow: 0px 10px 7px -7px rgba(0,0,0,0.5);
-  height: 180px;
+  box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.5);
   padding: 10px;
-  margin: 10px auto;
-  width: 80%;
+  margin-bottom: 2.33em;
 }
-.divProductosMarca article.articulomarca div a p {
+.articulomarca div a p {
   color: #0093dd;
 }
-.divProductosMarca article.articulomarca div a:hover {
+.articulomarca div a:hover {
   text-decoration: none;
   transition: 0.5ms all;
 }
-.divProductosMarca article.articulomarca div a:hover p {
+.articulomarca div a:hover p {
   color: #fd640a;
 }
-.divProductosMarca article.articulomarca div p.pDesc {
-  overflow-x: hidden;
+
+
+.articulomarca div p.sku {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.divProductosMarca article.articulomarca div p.marcap {
+.articulomarca div p.marcap {
   color: #01ac0e;
 }
-.divProductosMarca article.articulomarca div p.price {
+.articulomarca div p.price {
   color: #000;
 }
-.divProductosMarca article.articulomarca div.divImg {
+div.divImg {
   border-right: 1px solid rgba(0,0,0,0.5);
   text-align: center;
 }
-.divProductosMarca article.articulomarca div.divImg figure {
-  height: 150px;
-  margin: 0 auto;
-  width: 50%;
+span.earphone{
+  color: #01ac0e;
+  font-size: 1.3em;
 }
-.divProductosMarca article.articulomarca div.divImg figure img {
-  height: 100%;
-  max-width: 100%;
-  width: 100%;
+a.earphone{
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.envios h3{
+  color: #ffffff;
+}
+.f-pagos h3 {
+  color: #ffffff;
 }
 .divSearch {
   background-image: url("../img/header.jpg"), url("../img/header2.jpg");
@@ -283,27 +290,22 @@ html {
   height: 100%;
   width: 60%;
 }
-footer {
+footer {    
+    bottom: 0px;
+    position: absolute;
+}
+.footer-bottom{
   color: #fff;
-  background-color: #000;
-  height: 40px;
-  max-width: 100%;
-  padding: 8px;
-  width: 100%;
+  background-color: #2A2E52;
+  padding: 1.4em 1em 1em 1em;
 }
 .footer {
-  background-color: #cbcbcb;
-  height: auto;
-  margin-top: 50px;
-  max-width: 100%;
-  min-height: 220px;
-  padding: 30px;
-  width: 100%;
+  background-color: #cbcbcb;  
 }
-.footer .footer-after {
-  background-color: #f00;
-  color: #fff;
-  width: 100%;
+.menu-footer li a{
+  color: #ffffff;
+  text-decoration: none;
+
 }
 .footer .footer-after p {
   line-height: 30px;
@@ -337,23 +339,11 @@ footer {
   font-size: 12px;
   width: 80%;
 }
-h1,
-h2,
-h3,
-h4 {
-  color: #01ac0e;
-  font-family: 'Michroma', sans-serif;
-  font-weight: 600;
-}
-h1.h1-seccion {
-  color: #fd640a !important;
-  font-size: 22px;
-  font-weight: 500;
-}
+
 hr {
   background-color: #47a3da;
   border: 0;
-  height: 3px;
+  height: 2px;
 }
 input[type=range] {
   -webkit-appearance: none;
@@ -546,38 +536,32 @@ p.ofertas {
   }
 }
 @media screen and (max-width: 960px) {
-  .divArticles {
-    height: 150px !important;
+  .container-mov{
+    width: 100% !important;
+    padding: 0px;
   }
-  .divArticles p {
-    font-size: 8px;
+  .padding-container{
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
+  a.earphone {
+    font-size: 1.1em;
+  }    
+  .articulomarca div p.pDesc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
   }
-  .divArticles div:nth-child(3) .spnCosto {
-    font-size: 10px;
+  .articulomarca {
+    margin-left: 0.1em;
+    margin-right: 0.1em;
   }
-  .divProductosMarca article.articulomarca {
-    font-size: 12px;
-    height: 200px;
+    
+  .envios h3{
+    text-align: center !important;
   }
-  .divProductosMarca article.articulomarca p.pDesc {
-    overflow-x: scroll;
+  .f-pagos h3{
+    text-align: center !important;
   }
-  footer {
-    height: 100px;
-    clear: both;
-  }
-  footer p {
-    font-size: 10px;
-  }
-  .footer {
-    height: auto;
-    min-height: 100%;
-  }
-  .footer .footer-before {
-    height: 100%;
-  }
-  .footer .footer-before ul:first-child li {
-    width: 90%;
-  }
+  
 }
