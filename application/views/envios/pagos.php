@@ -59,7 +59,7 @@
         <div class="col-md-3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <p style="font-weight:bold;font-size:1.4em">Sitio en construccion, podra comprar en breve!</p>
+                    <p style="font-weight:bold;font-size:1.4em">Sitio en construcción, podra comprar en breve!</p>
                     <hr>
                     <!--<p class="titulo">Pagos</p>
                     <hr>

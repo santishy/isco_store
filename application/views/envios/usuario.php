@@ -8,7 +8,7 @@
 			    	<form  action="<?=base_url()?>envios/ingresarUsuario" method="post">
 			    		<div class="form-group">
 			    			<label>Correo</label>
-			    			<input name="correo" type="text" class="form-control" value="">
+			    			<input name="correo" type="email" class="form-control" value="">
 			    		</div>
 			    		<div class="form-group">
 			    			<label>Password</label>
@@ -30,7 +30,7 @@
 			    	<form action="<?=base_url()?>envios/registrarUsuario" method="post">
 			    		<div class="form-group">
 			    			<label>Correo</label>
-			    			<input type="text" name="correo" class="form-control" value="">
+			    			<input type="email" name="correo" class="form-control" value="">
 			    		</div>
 			    		<div class="form-group">
 			    			<label>Password</label>
@@ -55,12 +55,14 @@
 					<div class="col-xs-6" >
 						<div class="col-sm-12 divArticles">
 							<figure>
-								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($ar->sku, 0,1)?>/<?=substr($ar->sku, 1,1)?>/<?=$ar->sku?>.jpg" alt=""  /></a>
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>">
+									<img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($ar->sku, 0,1)?>/<?=substr($ar->sku, 1,1)?>/<?=$ar->sku?>.jpg" alt="" class="img-responsive" />
+								</a>
 							</figure>
-							<p>
+							<p class="descripcion">
 								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>"><?=$ar->descripcion?></a>
 							</p>
-							<div>
+							<div class="descripcion-costo">
 								<!--<p><del>$ <?=$ar->precio?></del> </p>-->
 								<?php if($ar->descuento > 0){ ?>
 									<p class="spnCosto">$ <?=$ar->precio-(($ar->precio*$ar->descuento)/100).' '.$ar->moneda?></p>

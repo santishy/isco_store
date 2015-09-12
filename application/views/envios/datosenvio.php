@@ -2,9 +2,18 @@
 	<div class="row" style="margin-top:10px;">
 		<div class="col-sm-8">
 			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="col-md-8">
+						<h3>Datos de Envio</h3>
+					</div>
+					<div class="col-md-4 text-right">
+						<p id="datosEnvioAnterior" class="envio" data-ruta="<?=base_url()?>envios/obtenerUltimoEnvio">
+							<span class="glyphicon glyphicon-send" ></span>
+						</p>
+					</div>
+				</div>
 				<div class="panel-body">
-					<p style="width:80%;display:inline-block">Datos de Envio</p><p id="datosEnvioAnterior" style="width:20px;height:20px;border-radius:20px;color:white;background-color:red;display:inline-block" data-ruta="<?=base_url()?>envios/obtenerUltimoEnvio"><span class="glyphicon glyphicon-send" ></span></p>
-					<hr>
+			 	
 					<form class="form-horizontal" name="frm_envio" id="frm_envio" method="post" action="<?=base_url()?>envios/registroEnvio" >
 						<div class="form-group">
 							<label class="col-md-2 control-label">Nombre</label>
@@ -83,7 +92,7 @@
 								<input type="text" name="rfc" class="form-control" value="<?=set_value('rfc')?>">
 							</div>	
 							
-							<div class="col-md-5">
+							<div class="col-md-5 text-right">
 								<button class="btn btn-primary">Guardar</button>
 								<button type="button" id="btnLimpiar" class="btn btn-info">Limpiar</button>
 							</div>	

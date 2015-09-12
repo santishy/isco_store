@@ -40,6 +40,15 @@ label {
 .container-full{
   width: 100%;
 }
+.panel-heading {
+  overflow: overlay;
+}
+p.envio {
+    font-size: 3em;
+    padding: 0px !important;
+    margin: 0px;
+    color: #2A2E52;
+}
 .adSearch {
   background-color: #008cba;
   color: #fff;
@@ -292,7 +301,6 @@ a.earphone{
 }
 footer {    
     bottom: 0px;
-    position: absolute;
 }
 .footer-bottom{
   color: #fff;
@@ -564,4 +572,64 @@ p.ofertas {
     text-align: center !important;
   }
   
+}
+/*No hay resultados*/
+.figure{
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+.ups {
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+}
+ 
+.ups b {
+  background-color: #337ab7;
+  height: 50px;
+  width: 30px;
+  display: block;
+  float: left;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-right: 45px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 75px;
+  animation-name: ojos;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+ 
+.ups i {  
+  border: 2px solid #337ab7;
+  height: 80px;
+  width: 100px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  border-radius: 50px 50px 0px 0px;
+  border-bottom: none;border-left: none;border-right: none;
+  animation-name: boca;
+  animation-duration: 3.5s;
+}
+@keyframes ojos {
+    0%   {height: 2px;margin-top: 53px;}
+    25%  {height: 50px;margin-top: 25px;}
+    50%  {height: 2px;margin-top: 53px;}
+    100% {height: 50px;margin-top: 25px;}
+}
+@keyframes boca {
+    0%   {width: 70px;left: 90px;border-bottom: 2px solid  #337ab7;border-left: 2px solid #337ab7;border-right: 2px solid #337ab7;border-radius: 35px 35px 35px 35px;}
+    5%   {width: 70px;left: 90px;border-bottom: 1px solid  #337ab7;border-left: 1px solid #337ab7;border-right: 1px solid #337ab7;border-radius: 35px 35px 35px 35px;}
+   
+    100% {width: 100px;left: 75px;border-bottom: none;border-left: none;border-right: none;border-radius: 50px 50px 0px 0px;}
 }

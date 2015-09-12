@@ -155,7 +155,15 @@
 					</div>
 				</article>
 				<?php } ?>
-			<?php } else { ?> <p class="text-center">No hay resultados para la búsqueda</p> <?php } ?>
+			<?php } else { ?> 	<div class="col-md-12">
+								<div class="ups figure">
+									<b></b><b></b>
+									<i></i>
+								</div>
+								
+								</div>
+								<p class="text-center">No hay resultados para la búsqueda</p>
+								 <?php } ?>
 		</div>
 	</div>
 	<div class="text-center">
