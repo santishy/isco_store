@@ -85,6 +85,8 @@ class Productos extends CI_Controller {
 			$data['existencia'] = $vec['exis'];
 			$data['title'] = "ISCO COMPUTADORAS S.A de C.V";
 			$data['file'] = 'main.js';
+			$consulta=$this->ModelArticulo->getProdCategoria($vec['linea']);
+			$data['query']=$this->generarAleatorios(6,$consulta->result_array());
 			$this->load->view('includes/headersite',$data);
 			$this->load->view('producto',$vec);
 			$this->load->view('includes/cart');
@@ -97,7 +99,15 @@ class Productos extends CI_Controller {
 		}
 		
 	}
-
+	public function generarAleatorios($n,$data)
+	{
+		$max=count($data);
+		for($i=0;$i<$n;$i++)
+		{
+			$vec[$i]=$data[rand(1,$max)];
+		}
+		return $vec;
+	}
 	function productSold(){
 		$vec['agotado'] = 'Lo sentimos no hay existencias disponibles del producto que deseas por ahora.';
 		$data['secciones'] = $this->ModelArticulo->getSections();

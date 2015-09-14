@@ -612,6 +612,11 @@ function getArticlesRangoL($id,$precio,$precioF,$ban,$inicio,$tope,$linea)
 								m.id_marca=a.id_marca where m.id_marca='.$id.';');
 		return $query;
 	}
+	function getProdCategoria($linea)
+	{
+		$query=$this->db->query('select *from articulos a join detinvart ea on a.id_articulo=ea.id_articulo join inventario i on i.id_inventario=ea.id_inventario join marcas m on m.id_marca=a.id_marca join lineas l on l.id_linea=a.id_linea join secciones s on s.id_seccion=a.id_seccion join utilidades u on u.id_utilidad=a.id_utilidad where linea="'.$linea.'";');
+		return $query;
+	}
 }	
 
 ?>

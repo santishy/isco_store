@@ -77,7 +77,37 @@
 			</div>
 			<?php } ?>
 		</div>
-	</div><hr>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-xs-12 div Ofertas">
+
+				<?php for($i=0;$i<count($query);$i++) { ?>
+					<div class="col-md-3 col-xs-6" >
+						<div class="col-sm-12 divArticles">
+							<figure>
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$query[$i]['id_articulo']?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($query[$i]['sku'], 0,1)?>/<?=substr($query[$i]['sku'], 1,1)?>/<?=$query[$i]['sku']?>.jpg" alt="" data-sku="<?=$query[$i]['sku']?>" class="img-responsive"/></a>
+							</figure>
+							<p class="descripcion">
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$query[$i]['id_articulo']?>"><?=$query[$i]['descripcion']?></a>
+							</p>
+							<div class="descripcion-costo">
+								<!--<p><del>$ <?=$ar->precio?></del> </p>-->
+								<?php if($query[$i]['descuento'] > 0){ ?>
+									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil((($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))-(($query[$i]['precio']*$query[$i]['descuento'])/100)*1.16)),2,".",",")?></p>
+								<?php } else { ?>
+									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil(($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))*(1.16)),2,".",",")?></p>
+								<?php } ?>	
+							</div>
+							<!--<div>
+								<a href="#"><button class="btn btn-primary btn-sm pull-right  btnCart">Añadir <span class="glyphicon glyphicon-shopping-cart white" style="color:white;" aria-hidden="true"></span></button></a>
+							</div>-->
+						</div>
+					</div>
+				<?php } ?>	
+			</div>
+	</div>
+	<hr>
 	<div class="row container-especificaciones" id="especificaciones">
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="table-responsive">
