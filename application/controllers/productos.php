@@ -94,7 +94,8 @@ class Productos extends CI_Controller {
 			$this->load->view('includes/scripts');
 
 		}
-		else{
+		else
+		{
 			echo 'no se encontro el producto';
 		}
 		
@@ -106,7 +107,8 @@ class Productos extends CI_Controller {
 			$n=$max;
 		for($i=0;$i<$n;$i++)
 		{
-			$vec[$i]=$data[rand(1,$max)];
+			$ind=rand(1,$max);
+			$vec[$i]=$data[$ind];
 		}
 		return $vec;
 	}
