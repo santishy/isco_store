@@ -103,6 +103,7 @@ class Productos extends CI_Controller {
 	public function generarAleatorios($n,$data)
 	{
 		$max=count($data);
+		
 		if($max<$n)
 			$n=$max;
 		for($i=0;$i<$n;$i++)

@@ -12,11 +12,13 @@ class Inicio extends CI_controller {
 	{
 		$data['secciones'] = $this->ModelArticulo->getSections();
 		$data['marcas'] = $this->ModelArticulo->getMarcas();
-		$vec=$this->generarAleatorios(20);
-		//$data['articles']=$this->consultaAleatoria($vec);
-		$data['articles'] = $this->ModelArticulo->Oferts();
-		$data['destacados'] = $this->ModelArticulo->Destacados();
-		$data['recomendados'] = $this->ModelArticulo->Recomendados();
+		$vec=$this->generarAleatorios(12);
+		$data['articles']=$this->consultaAleatoria($vec);
+		//$data['articles'] = $this->ModelArticulo->Oferts();
+		$vec=$this->generarAleatorios(12);
+		$data['destacados'] = $this->consultaAleatoria($vec);
+		$vec=$this->generarAleatorios(12);
+		$data['recomendados'] = $this->consultaAleatoria($vec);
 		$data['title'] = "ISCO COMPUTADORAS S.A de C.V";
 		$data['file'] = "main.js";
 		$this->load->view('includes/headersite',$data);
