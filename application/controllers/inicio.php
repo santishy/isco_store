@@ -30,7 +30,7 @@ class Inicio extends CI_controller {
 	}
 	function consultaAleatoria($id)
 	{
-		$cadena="select *from articulos a join detinvart ea on a.id_articulo=ea.id_articulo join inventario i on i.id_inventario=ea.id_inventario join marcas m on m.id_marca=a.id_marca join lineas l on l.id_linea=a.id_linea join secciones s on s.id_seccion=a.id_seccion where ";
+		$cadena="select *from articulos a left join detinvart ea on a.id_articulo=ea.id_articulo left join inventario i on i.id_inventario=ea.id_inventario left join marcas m on m.id_marca=a.id_marca left join lineas l on l.id_linea=a.id_linea left join secciones s on s.id_seccion=a.id_seccion left join utilidades u on u.id_utilidad=a.id_utilidad where ";
 		for($i=0;$i<count($id);$i++)
 		{
 			$cadena.=' a.id_articulo='.$id[$i];
