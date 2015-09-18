@@ -52,14 +52,14 @@
 		<!--<div class="slider">
 			
 		</div>-->
-		<div class="col-xs-12 col-md-12 padding-container">
+		<div class="col-xs-12 col-md-12 padding-container ">
 			<h2 style="color:#0066FF !important;">OFERTAS</h1><hr>
-			<div class="col-xs-12 div Ofertas">
+			<div class="col-xs-12 div Ofertas ">
 				<?php foreach($articles->result() as $ar) { ?>
 					<div class="col-md-3 col-xs-6" >
-						<div class="col-sm-12 divArticles">
+						<div class="col-sm-12 divArticles ">
 							<figure>
-								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($ar->sku, 0,1)?>/<?=substr($ar->sku, 1,1)?>/<?=$ar->sku?>.jpg" alt="" data-sku="<?=$ar->sku?>" class="img-responsive"/></a>
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($ar->sku, 0,1)?>/<?=substr($ar->sku, 1,1)?>/<?=$ar->sku?>.jpg" alt="" data-sku="<?=$ar->sku?>" class="img-responsive thumb"/></a>
 							</figure>
 							<p class="descripcion">
 								<a href="<?=base_url()?>productos/detallesproducto/<?=$ar->id_articulo?>"><?=$ar->descripcion?></a>
@@ -80,14 +80,14 @@
 				<?php } ?>	
 			</div>
 		</div>
-		<div class="col-xs-12">
+		<div class="col-xs-12 col-md-12 padding-container">
 			<h2 style="color:#33CCCC !important;">DESTACADOS</h2><hr>
 			<div class="col-xs-12 div Ofertas">
 				<?php foreach($destacados->result() as $des) { ?>
 					<div class="col-md-3 col-xs-6" >
 						<div class="col-sm-12 divArticles">
 							<figure>
-								<a href="<?=base_url()?>productos/detallesproducto/<?=$des->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($des->sku, 0,1)?>/<?=substr($des->sku, 1,1)?>/<?=$des->sku?>.jpg" alt="" data-sku="<?=$des->sku?>"  class="img-responsive" /></a>
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$des->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($des->sku, 0,1)?>/<?=substr($des->sku, 1,1)?>/<?=$des->sku?>.jpg" alt="" data-sku="<?=$des->sku?>"  class="img-responsive thumb" /></a>
 							</figure>
 							<p class="descripcion">
 								<a href="<?=base_url()?>productos/detallesproducto/<?=$des->id_articulo?>"><?=$des->descripcion?></a>
@@ -120,14 +120,14 @@
 				</figure>
 			</div>
 		</div>
-		<div class="col-xs-12">
+		<div class="col-xs-12 col-md-12 padding-container">
 			<h2 style="color:#000 !important;">RECOMENDADOS</h2><hr>
 			<div class="col-xs-12 div Ofertas">
 				<?php foreach($recomendados->result() as $rec) { ?>
 					<div class="col-md-3 col-xs-6" >
 						<div class="col-sm-12 divArticles">
 							<figure>
-								<a href="<?=base_url()?>productos/detallesproducto/<?=$rec->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($rec->sku, 0,1)?>/<?=substr($rec->sku, 1,1)?>/<?=$rec->sku?>.jpg" alt="" data-sku="<?=$rec->sku?>"  class="img-responsive"/></a>
+								<a href="<?=base_url()?>productos/detallesproducto/<?=$rec->id_articulo?>"><img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($rec->sku, 0,1)?>/<?=substr($rec->sku, 1,1)?>/<?=$rec->sku?>.jpg" alt="" data-sku="<?=$rec->sku?>"  class="img-responsive thumb"/></a>
 							</figure>
 							<p class="descripcion">
 								<a href="<?=base_url()?>productos/detallesproducto/<?=$rec->id_articulo?>"><?=$rec->descripcion?></a>

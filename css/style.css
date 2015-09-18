@@ -32,6 +32,40 @@ label {
     font-weight: 300;
     font-size: 1.29em;
 }
+.thumb-container,
+.thumb-inner,
+.thumb-img {
+  border: 0;
+  display: block;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+
+.thumb-container {
+  height: 9em;  
+  width: 100%;
+}
+
+.thumb-container a,
+.thumb-container img {
+  border: 0;
+  margin: 0;
+}
+
+.thumb-center img,
+.thumb-strip,
+.thumb-icon {
+  position: absolute;
+}
+
+
+
 .box-shadow{
   background-color: #fff;
   border-radius: 5px;
@@ -78,9 +112,40 @@ p.envio {
   height: 100%;
   width: 100%;
 }
-.carousel-inner>.item>img,
-.carousel-inner>.item>a>img {  
-  width: 100%;
+.relacionados .carousel {
+    margin-bottom: 0;
+    padding: 0px 0px 10px 20px;
+}
+
+.relacionados .carousel-control.left, .relacionados .carousel-control.right {
+  background-image:none !important;
+}
+.relacionados .carousel-control .left:hover{
+   background-image: linear-gradient(to right,rgba(0,0,0,0.1) 0,rgba(0,0,0,.0001) 100%);
+}
+.relacionados .carousel-control .right:hover {
+  background-image: linear-gradient(to right,rgba(0,0,0,0.1) 0,rgba(0,0,0,.0001) 100%);
+}
+.relacionados .carousel-control {   
+    width: 8%;
+    font-size: 10em;
+    color: #2A2E52;    
+    font-weight: 300;
+}
+
+.relacionados .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+
+.relacionados .carousel-indicators li {
+  background: #c0c0c0;
+}
+
+.relacionados .carousel-indicators .active {
+background: #333333;
 }
 .center {
   text-align: center;
@@ -543,7 +608,48 @@ p.ofertas {
     -o-transform: rotate(360deg);
   }
 }
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+@media (min-width: 524px) { 
+  .thumb-container {
+    height: 18em; 
+  }
+  h2{
+    padding-left: 0.756em
+  }
+ }
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .thumb-container {
+    height: 21em; 
+  }
+ }
+
+/* Medium devices (desktops,  and up) */
+@media (min-width: 992px) { 
+  .thumb-container {
+    height: 13em;  
+  }
+  .relacionados .carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
+ }
+
+/* Large devices (large desktops,  and up) */
+@media (min-width: 1200px) { 
+  .thumb-container {
+    height: 16em;  
+  }
+  .relacionados .carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
+
+ }
 @media screen and (max-width: 960px) {
+  
   .container-mov{
     width: 100% !important;
     padding: 0px;
@@ -551,6 +657,9 @@ p.ofertas {
   .padding-container{
     padding-left: 0.1em;
     padding-right: 0.1em;
+  }
+  .padding-container h2{
+    padding-left: 0.756em
   }
   a.earphone {
     font-size: 1.1em;
@@ -570,6 +679,10 @@ p.ofertas {
   }
   .f-pagos h3{
     text-align: center !important;
+  }
+  .p-relacionado{
+    padding-right: 0.3em;
+    padding-left: 0.3em;
   }
   
 }
