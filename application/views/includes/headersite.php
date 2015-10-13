@@ -54,9 +54,11 @@
 					<div class="form-group">
 					    <div class="input-group">
 					      <input type="text" class="form-control" id="txtSearch" name="txtSearch" placeholder="Búsqueda en Isco" title="Escribe lo que buscas" required />
-					      <div class="input-group-addon adSearch">
-					      	<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-					      </div>
+					      <span class="input-group-btn">
+					      	<button class="btn btn-primary adSearch" id="btnSearch">
+					      		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					      	</button>
+					      </span>
 					    </div>
 				   </div>
 				</form>

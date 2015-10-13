@@ -74,9 +74,10 @@ label {
 .thumb-icon {
   position: absolute;
 }
-
-
-
+#lightgallery .thumbnail{
+  border:none !important;
+  margin-bottom: 0px !important;
+}
 .box-shadow{
   background-color: #fff;
   border-radius: 5px;

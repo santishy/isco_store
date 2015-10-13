@@ -2,14 +2,13 @@
 	<div class="row">
 		<div class="col-md-12 ">
 			<?php foreach($articulo->result() as $art){ ?>			
-			<div class="col-xs-12">
-				<div class="col-md-5 ">
+			<div class="col-md-12 col-xs-12">
+				<div class="col-md-5 col-xs-12 ">
 					<figure>
 						<img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($art->sku, 0,1)?>/<?=substr($art->sku, 1,1)?>/<?=$art->sku?>.jpg"
-						 alt="imagen de producto" class="img-responsive" />
+						 alt="imagen de producto" class="img-responsive" style=" margin: 0 auto;"/>
 					</figure>					
-					<div id="lightgallery row">
-					
+					<div id="lightgallery" style="overflow: overlay;border: 1px solid #ddd; border-radius: 4px;">	
 
 							<?php $cad=$art->sku; 
 							
@@ -18,10 +17,10 @@
 								//echo 'https://s3.amazonaws.com/imgisco/'.$cad.'.jpg';
 								//if(@fopen('https://s3.amazonaws.com/imgisco/'.$cad.'.jpg','r') ){?>						
 										
-											<a href="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg" class="thumbnail col-md-2 col-sm-3 col-xs-3" style="    min-height: 72px;    height: 72px;">
-												<img class="img-responsive" src="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg">
-											</a>
-											
+										<a href="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg" class="thumbnail col-md-3 col-sm-3 col-xs-3" style=" min-height: 108px; height: auto; max-height: 175px;">
+											<img class="img-responsive" src="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg">
+										</a>
+										
 										
 									<?php 
 									//}
@@ -39,7 +38,7 @@
 						<?php }?>
 					</div>
 				</div>
-				<div class="col-md-7 div-compra">
+				<div class="col-md-7 col-xs-12 div-compra">
 					<div class="col-md-12">
 						<h3><?=$art->descripcion?></h3>
 					</div>
