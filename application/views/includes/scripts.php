@@ -4,7 +4,28 @@
 <script src="<?=base_url()?>js/menu.js"></script>
 <script src="<?=base_url()?>js/thumbnail.js"></script>
 <script src="<?=base_url()?>js/cart.js"></script>
-    <script>
+<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+<!-- lightgallery plugins -->
+
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="<?=base_url()?>js/galeria/lightgallery.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-fullscreen.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-thumbnail.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-video.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-autoplay.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-zoom.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-hash.js"></script>
+<script src="<?=base_url()?>js/galeria/lg-pager.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery({
+                thumbnail: true
+            }); 
+    });
+</script>
+<script>
         /*$(document).on('ready',function(){
               var dispositivo = navigator.userAgent.toLowerCase();
 
@@ -46,5 +67,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $(".thumb").thumbs();
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#aniimated-thumbnials').lightGallery({
+            thumbnail:true
+        }); 
     });
 </script>

@@ -32,6 +32,17 @@ label {
     font-weight: 300;
     font-size: 1.29em;
 }
+.nav-separador {
+    border-bottom: 1px solid rgba(0, 151, 217, 0.15);
+    margin-bottom: 3em;
+    box-shadow: 2px 8px 11px -3px rgba(200, 202, 204, 0.28);
+}
+.ico-login{
+  color: #337AB7 !important;
+}
+.categorias .badge{
+  background-color: #337AB7 !important;
+}
 .thumb-container,
 .thumb-inner,
 .thumb-img {

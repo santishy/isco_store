@@ -1,6 +1,6 @@
 <div class="container divProductosMarca">
-	<div class="row">
-		<div class="col-xs-9">
+<div class="row">
+		<div class="col-md-9 col-sm-12 col-xs-12">
 			<?php foreach($nombremarca->result() as $marca) { 
 				if($ban == 1){
 
@@ -17,7 +17,39 @@
 
 			?>	
 		</div>
+		<div class="col-md-3 col-sm-12 col-xs-12">
+			<h4 style="display:<?php if($this->uri->segment(2)=='rango' || $this->uri->segment(2)=='precio') echo 'none';?>">Ordenar por precio</h4> 
+			<div class="row" style="display:<?php if($this->uri->segment(2)=='rango' || $this->uri->segment(2)=='precio') echo 'none';?>">
+				<form action="<?=base_url()?>busqueda/precio" method="post" id="frmRange">
+					<div class="col-xs-12">
+						<div class="form-group">
+							<?php if($this->uri->segment(4)=='linea'){ ?>
+								<a href="<?=base_url()?><?=$this->uri->segment(1)?>/<?=$this->uri->segment(2)?>/<?=$this->uri->segment(3)?>/linea/<?=$this->uri->segment(5)?>/2" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="de menor a mayor">
+									<span class="glyphicon glyphicon-menu-down"></span>
+									<span class="glyphicon glyphicon-menu-up"></span>
+								</a>
+								<a href="<?=base_url()?><?=$this->uri->segment(1)?>/<?=$this->uri->segment(2)?>/<?=$this->uri->segment(3)?>/linea/<?=$this->uri->segment(5)?>/1" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="de mayor a menor">
+									<span class="glyphicon glyphicon-menu-up"></span>
+									<span class="glyphicon glyphicon-menu-down"></span>
+								</a>	
+							<?php } else {?>
+								<a href="<?=base_url()?><?=$this->uri->segment(1)?>/<?=$this->uri->segment(2)?>/<?=$this->uri->segment(3)?>/2" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="de menor a mayor">
+									<span class="glyphicon glyphicon-menu-down"></span>
+									<span class="glyphicon glyphicon-menu-up"></span>
+								</a>
+								<a href="<?=base_url()?><?=$this->uri->segment(1)?>/<?=$this->uri->segment(2)?>/<?=$this->uri->segment(3)?>/1" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="de mayor a menor">
+									<span class="glyphicon glyphicon-menu-up"></span>
+									<span class="glyphicon glyphicon-menu-down"></span>
+								</a>
+							<?php }?>
+						</div>
+					</div>
+				</form>
+			</div> 
+		</div>
 	</div>
+	
+	
 	<hr>
 	<div class="row">
 		<div class="col-sm-3 busqueda-rango" >
@@ -119,7 +151,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 categorias">
 			<div class="col-md-11">		
 				<div class="panel panel-primary">
 				  <!-- Default panel contents -->

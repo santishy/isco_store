@@ -7,7 +7,37 @@
 					<figure>
 						<img src="http://www.pchmayoreo.com/media/catalog/product/<?=substr($art->sku, 0,1)?>/<?=substr($art->sku, 1,1)?>/<?=$art->sku?>.jpg"
 						 alt="imagen de producto" class="img-responsive" />
-					</figure>
+					</figure>					
+					<div id="lightgallery row">
+					
+
+							<?php $cad=$art->sku; 
+							
+							for($i=0;$i<4;$i++) 
+							{ 
+								//echo 'https://s3.amazonaws.com/imgisco/'.$cad.'.jpg';
+								//if(@fopen('https://s3.amazonaws.com/imgisco/'.$cad.'.jpg','r') ){?>						
+										
+											<a href="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg" class="thumbnail col-md-2 col-sm-3 col-xs-3" style="    min-height: 72px;    height: 72px;">
+												<img class="img-responsive" src="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg">
+											</a>
+											
+										
+									<?php 
+									//}
+										//$cad=addslashes($cad."\x20");
+										$cad.="+";
+									?>
+								<?php 
+								} 
+								?>
+						
+															  
+ 					
+						<?php 	if(@fopen('https://s3.amazonaws.com/imgisco/'.$cad.'.jpg','r')) {?>
+						<a href="https://s3.amazonaws.com/imgisco/<?=$art->sku?>.pdf" target="_blank">Ficha tecnica</a>
+						<?php }?>
+					</div>
 				</div>
 				<div class="col-md-7 div-compra">
 					<div class="col-md-12">
@@ -16,9 +46,7 @@
 					<div class="col-md-7">
 						<h4>Descripción breve</h4>
 						<div class="descripcion">
-
 							<table class="table table-hover">
-								
 								<tbody>
 									<tr>
 										<td class="">Linea</td>
@@ -62,18 +90,11 @@
 										</span>
 									</div>
 								</div>
-
-								
-									
-							
 							</form>
 						</div>
 						<p class="costo-envio">Costo de envio $99 pesos Enviamos a toda la República</p>	
-						
 					</div>
-										
 				</div>
-
 			</div>
 			<?php } ?>
 		</div>
@@ -82,26 +103,18 @@
 	<div class="row">
 		<div class="col-xs-12 div relacionados"> 	
 			<div class="container">
-  
 		  <div class="span8">
-		    
 		    <h1>Te puede interesar</h1>
-		    
 		    <div class="">
-		     
 		    <div id="myCarousel" class="carousel slide">
-		     
-		    
-		     
 		    <!-- Carousel items -->
 		    <div class="carousel-inner">
-		        
-		    
 		     	<div class="item active">
 		        	<div class="row-fluid">
-		          <?php for($i=0;$i<count($query);$i++) { ?>
-		          	<?php if ($i<4) {?>
-		          	
+		          <?php for($i=0;$i<count($query);$i++) 
+		          { ?>
+		          	<?php if ($i<4) 
+		          	{?>	          	
 		          	<div class="col-md-3 col-xs-6 col-sm-6 p-relacionado" >
 						<div class="col-xs-12 col-sm-12 col-md-12 divArticles">
 		          		<a href="<?=base_url()?>productos/detallesproducto/<?=$query[$i]['id_articulo']?>" >			          			
@@ -112,9 +125,13 @@
 						</p>
 							<div class="descripcion-costo">
 								<!--<p><del>$ <?=$ar->precio?></del> </p>-->
-								<?php if($query[$i]['descuento'] > 0){ ?>
+								<?php if($query[$i]['descuento'] > 0)
+								{ ?>
 									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil(($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))-(($des->precio*$query[$i]['descuento'])/100)*1.16),2,".",",")?></p>
-								<?php } else { ?>
+								<?php 
+							} 
+							else
+								 { ?>
 									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil(($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))*1.16),2,".",",")?></p>
 								<?php } ?>	
 							</div>
@@ -123,16 +140,22 @@
 							</div>-->
 		          		</div>
 		          	</div>
-		          	
-		        	<?php } ?>
-		          	<?php } ?>
+		        <?php
+		         }
+		        ?>
+		        <?php 
+		          } 
+		        ?>
 		         </div><!--/row-fluid-->
 		    	</div><!--/item-->
 		    	<div class="item ">
 		        	<div class="row-fluid">
-		          <?php for($i=0;$i<count($query);$i++) { ?>
-		          	<?php if ($i>3 && $i<8){?>
-		          	
+		          <?php 
+		          	for($i=0;$i<count($query);$i++) 
+		          		{ ?>
+		          		<?php 
+		          			if ($i>3 && $i<8)
+		          				{?>
 		          	<div class="col-md-3 col-xs-6 col-sm-6 p-relacionado" >
 						<div class="col-xs-12 col-sm-12 col-md-12 divArticles">
 		          		<a href="<?=base_url()?>productos/detallesproducto/<?=$query[$i]['id_articulo']?>" >			          			
@@ -143,9 +166,11 @@
 						</p>
 							<div class="descripcion-costo">
 								<!--<p><del>$ <?=$ar->precio?></del> </p>-->
-								<?php if($query[$i]['descuento'] > 0){ ?>
+								<?php if($query[$i]['descuento'] > 0)
+								{ ?>
 									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil(($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))-(($des->precio*$query[$i]['descuento'])/100)*1.16),2,".",",")?></p>
-								<?php } else { ?>
+								<?php } else
+								 { ?>
 									<p class="spnCosto">$ <?php $utilidad=$query[$i]['utilidad']; if($query[$i]['utilidad']==0)$utilidad=$query[$i]['ut']; echo number_format(ceil(($query[$i]['precio']+(($query[$i]['precio']*$utilidad)/100))*1.16),2,".",",")?></p>
 								<?php } ?>	
 							</div>
@@ -154,24 +179,17 @@
 							</div>-->
 		          		</div>
 		          	</div>
-		          	
 		        	<?php } ?>
 		          	<?php } ?>
 		         </div><!--/row-fluid-->
-		    	</div><!--/item-->
-				
-		    
-		     
+		    	</div><!--/item-->		     
 		    </div><!--/carousel-inner-->
-		     
 		    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
 		    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 		    </div><!--/myCarousel-->
-		     
 		    </div><!--/well-->
 		  </div>
 		</div>
- 
 	</div>
 	</div>
 	<hr>
@@ -179,28 +197,48 @@
 		<div class="col-sm-8 col-sm-offset-2">
 			<div class="table-responsive">
 				<table class="table table-hover">
-					<caption>ESPECIFICACIONES DEL PRODUCTO</caption>
+					<caption>
+						ESPECIFICACIONES DEL PRODUCTO
+					</caption>
 					<thead>
 						<tr>
-							<th colspan="2" class="success">CARACTERÍSTICAS</th>
+							<th colspan="2" class="success">
+								CARACTERÍSTICAS
+							</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="success">Linea</td>
-							<td><?=$linea?></td>
+							<td class="success">
+								Linea
+							</td>
+							<td>
+								<?=$linea?>
+							</td>
 						</tr>
 						<tr>
-							<td class="success">Sección</td>
-							<td><?=$seccion?></td>
+							<td class="success">
+								Sección
+							</td>
+							<td>
+								<?=$seccion?>
+							</td>
 						</tr>
 						<tr>	
-							<td class="success">Marca</td>
-							<td><?=$marca?></td>
+							<td class="success">
+								Marca
+							</td>
+							<td>
+								<?=$marca?>
+							</td>
 						</tr>	
 						<tr>
-							<td class="success">Serie</td>
-							<td><?=$serie?></td>
+							<td class="success">
+								Serie
+							</td>
+							<td>
+								<?=$serie?>
+							</td>
 						</tr>
 					</tbody>
 					<thead>	

@@ -23,15 +23,11 @@
 				       		<img src="img/2.jpg" alt="">
 				      	</div>-->
 					</div>
-
-					<!--<div class="item">
-						<img src="<?=base_url()?>banner/s3.jpg" alt="">
-						<div class="carousel-caption">
-				        	<img src="img/3.jpg" alt="">
-				     	</div>
-					</div>-->
+					<div class="item">
+						<img src="<?=base_url()?>banner/18aniversario.jpg" alt="">
+						
+					</div>
 				</div>
-
 				 <!-- Controls -->
 			    <a class="left carousel-control" href="#mySlider" role="button" data-slide="prev">
 			    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

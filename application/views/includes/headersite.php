@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="<?=base_url()?>css/menu.css" />
 	<link rel="stylesheet" href="<?=base_url()?>css/style.css" />
 	<link rel="stylesheet" href="<?=base_url()?>css/style-sm.css" />
+	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/galeria/lightgallery.css" /> 
 	<script type="text/javascript">
 		function Error_Cargar() {
 			window.event.srcElement.style.display = "None";
@@ -24,13 +25,13 @@
 	<header class="header">
 		<div class="row">
 			
-			<div class="col-md-4 col-xs-8 col-md-offset-3 text-right" style="line-height:50px;">
+			<div class="col-md-4 col-xs-8 col-md-offset-2 text-right" style="line-height:50px;">
 				<span class="glyphicon glyphicon-earphone earphone"></span>
 					<a href="tel:+523535327373" class="earphone">
-						<span >353-532-7373</span>
+						<span >SHY</span>
 					</a>y
 					<a href="tel:+523535325500" class="earphone">
-						<span >353-532-5500</span>
+						<span >GDL</span>
 					</a>
 
 			</div>
@@ -48,7 +49,7 @@
 					</li>	
 				</ul>
 			</div>
-			<div class="col-md-4 col-xs-12" style="margin-top:5px;">
+			<div class="col-md-3 col-xs-12" style="margin-top:5px;">
 				<form action="<?=base_url()?>busqueda" method="post">
 					<div class="form-group">
 					    <div class="input-group">
@@ -60,17 +61,25 @@
 				   </div>
 				</form>
 			</div>
+			<div class="col-md-2 text-center">
+				<a id="login"  href="#" style="line-height:50px;" data-toggle="modal" data-target=".bs-example-modal-sm">
+					<span >
+						<?php if($this->session->userdata('id_usuario')>0) echo $this->session->userdata('correo'); else echo 'Mi Cuenta'; ?>
+					</span>
+				</a>
+				<a class="btn btn-link cerrarSesion" style="display:<?php if(!$this->session->userdata('correo')) echo 'none;';?>" href="<?=base_url()?>envios/cerrarSesion" data-toggle="tooltip" data-placement="right" title="Cerrar Sesion"><span class="glyphicon glyphicon-log-out"></span></a>
+			</div>
 			
 		</div>
 		
-		<div class="row">
-		<div class="col-md-offset-1 col-md-2 col-xs-4">
-			<figure class="col-md-10">
-				<a href="<?=base_url()?>"><img src="<?=base_url()?>img/logotipo.png" alt="Isco Computadoras" class="img-responsive"/></a>
+		<div class="row nav-separador">
+		<div class="col-md-offset-1 col-xs-6 col-md-4 col-md-3 ">
+			<figure class="col-xs-12 col-sm-10 col-md-9">
+				<a href="<?=base_url()?>"><img src="<?=base_url()?>img/isco-rosa.png" alt="Isco Computadoras" class="img-responsive"/></a>
 			</figure>		
 		</div>
-		<div class="col-md-8">
-			<nav class="navbar navbar-default">
+		<div class="col-md-7">
+			<nav class="navbar navbar-default" style="margin-bottom: 0px;margin-top: 20px;">
 				<div class="">
 				<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -167,4 +176,29 @@
 			</nav>
 		</div>
 		</div>
-	</header>	
+	</header>
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-ruta="<?=base_url()?>producto/agregarPrecio">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+			  <div class="modal-header" >
+			    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			    <p class="titulo-login">Mi Cuenta</p>
+			  </div>
+			  <div class="modal-body">
+			    <form name="frmLoginCliente" id="frmLoginCliente" action="<?=base_url()?>envios/loginCliente">
+		          <div class="form-group">
+		            <label style="">Correo</label>
+		            <input type="email" name="usuario" id="usuario"class="form-control" placeholder="usuario@dominio.com">
+		          </div>
+		          <div class="form-group">
+		            <label style="">Contraseña</label>
+		            <input type="password" name="password" id="password" class="form-control">
+		          </div>
+		        </form>
+			  </div>
+			  <div class="modal-footer text-center">
+			    <button type="button" id="btnLoginCliente" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> Ingresar</button>
+			  </div>
+			</div>
+		</div>
+	</div>	
