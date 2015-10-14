@@ -17,7 +17,7 @@
 								//echo 'https://s3.amazonaws.com/imgisco/'.$cad.'.jpg';
 								//if(@fopen('https://s3.amazonaws.com/imgisco/'.$cad.'.jpg','r') ){?>						
 										
-										<a href="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg" class="thumbnail col-md-3 col-sm-3 col-xs-3" style=" min-height: 108px; height: auto; max-height: 175px;">
+										<a href="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg" class="thumbnail col-md-3 col-sm-3 col-xs-3" style=" min-height: 72px; height: auto; max-height: 175px;">
 											<img class="img-responsive" src="https://s3.amazonaws.com/imgisco/<?=$cad?>.jpg">
 										</a>
 										
